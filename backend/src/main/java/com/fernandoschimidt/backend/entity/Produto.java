@@ -2,13 +2,7 @@ package com.fernandoschimidt.backend.entity;
 
 import java.util.Date;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
@@ -21,20 +15,19 @@ public class Produto {
     private Long id;
 
     private String descricaoCurta;
-
     private String descricaoDetalhada;
-
     private Double valorCusto;
-
     private Double valorVenda;
-
     @ManyToOne
     @JoinColumn(name = "idMarca")
     private Marca marca;
-
     @ManyToOne
     @JoinColumn(name = "idCategoria")
     private Categoria categoria;
+
+//    @OneToMany(mappedBy = "produto")
+//    @JoinColumn(name = "idImagens")
+//    private Imagens imagens;
 
     private Date dataCriacao;
 
