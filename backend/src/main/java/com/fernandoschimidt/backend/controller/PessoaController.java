@@ -1,8 +1,6 @@
 package com.fernandoschimidt.backend.controller;
 
-import com.fernandoschimidt.backend.entity.Cidade;
 import com.fernandoschimidt.backend.entity.Pessoa;
-import com.fernandoschimidt.backend.service.CidadeService;
 import com.fernandoschimidt.backend.service.PessoaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

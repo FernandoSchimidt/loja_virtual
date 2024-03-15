@@ -22,7 +22,7 @@ public class PessoaService {
 
     public Pessoa inserir(Pessoa pessoa) {
         pessoa.setDataCriacao(new Date(0));
-        Pessoa pessoaNovo = repository.save(pessoa);
+        Pessoa pessoaNovo = repository.saveAndFlush(pessoa);
         return pessoaNovo;
     }
 
